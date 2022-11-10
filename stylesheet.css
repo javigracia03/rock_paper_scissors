@@ -14,7 +14,23 @@ h1{
     padding: 25px 0;
 }
 ul {
+    /*max-width: ;*/
     display: flex;
     flex-direction: row;
     list-style: none;
+    justify-content:center;
+    gap:200px;
+}
+img{
+    width: 100px;
+    
+}
+img:hover{
+    background-color: red;
+}
+
+.counter{
+    
+    text-align: center;
+    font-size:35px;
 }
