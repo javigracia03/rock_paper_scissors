@@ -22,12 +22,11 @@ let comp_choice = () => {
 
 };
 
-let user_choice = prompt("TYPE ROCK, PAPER OR SCISSORS").toLowerCase();
-console.log(user_choice);
 let winner;
 let congrats;
 
 function playRound(comp_choice, user_choice){
+
 
     
     if (comp_choice === user_choice){
@@ -58,14 +57,38 @@ function playRound(comp_choice, user_choice){
 
     }
 
+   
+
+    return winner;
+}
+
+function congrat (winner, user_choice, comp_choice){
+    let congrats;
     if (winner==="user"){
 
         congrats = `You won! ${user_choice} beats ${comp_choice}`
     }
-    else{
+    else if (winner==="computer"){
         congrats = `You lose! ${comp_choice} beats ${user_choice}`
     }
+    else congrats = "There was a draw";
 
     return congrats;
 }
-console.log(playRound(comp_choice(), user_choice));
+/*console.log(playRound(comp_choice(), user_choice));*/
+
+function game(){
+
+    for (let i=0; i<5;i++){
+        let user_choice = prompt("TYPE ROCK, PAPER OR SCISSORS").toLowerCase();
+        let compu_choice;
+        compu_choice = comp_choice();
+        
+        let winner_round = playRound(compu_choice, user_choice);
+        console.log(congrat(winner, user_choice, compu_choice));
+    }
+
+
+
+}
+game();
