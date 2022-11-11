@@ -38,7 +38,8 @@ img{
     
 }
 img:hover{
-    background-color: red;
+    background-color: gainsboro;
+
 }
 
 .counter{
